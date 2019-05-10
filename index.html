@@ -4,30 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent Jordan</title>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
     <style>
+        /* RESET */ html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}main{display:block;}h1{font-size:2em;margin:0.67em0;}hr{box-sizing:content-box;height:0;overflow:visible;}pre{font-family:monospace,monospace;font-size:1em;}a{background-color:transparent;}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underlinedotted;}b,strong{font-weight:bolder;}code,kbd,samp{font-family:monospace,monospace;font-size:1em;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}button,input,optgroup,select,input{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1pxdottedButtonText;}fieldset{padding:0.35em0.75em0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}input{overflow:auto;}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:list-item;}template{display:none;}[hidden]{display:none;}
         *{
             box-sizing: border-box;
-            padding: 0;
-            margin: 0;
         }
         body,html{
             width: 100%;
             height: 100%;
         }
         body{
+            font-family: 'Anonymous Pro', monospace;
+            background-color: #2c423f;
             text-align: center;
-            color: aliceblue;
-            /*background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg");*/
-            background-image: radial-gradient(at top, #666666, #333333);
-            background-repeat: no-repeat;
+            padding-top: 60px;
         }
-        #mainHeader{
-            margin: 20px auto;
+        .fl{
+            float: left;
+        }
+        #about, #contacts, #subjects, #skills{
+            width: 50%;
+            height: 25%;
+        }
+        main{
+            width: 90%;
+            margin: 0 auto;
+            border-top: 5px solid #c5c5c5;
+            border-left: 5px solid #c5c5c5;
+            border-right: 5px solid #667070;
+            border-bottom: 5px solid #667070;
+            height: 100%;
+            background-color: #a5a5a5;
+        }
+        main header{
+            width: 100%;
+            height: 25%;
+            /*background-image: radial-gradient(farthest-corner at 50% 0%, #829191 70%, transparent 70%);*/
         }
     </style>
 </head>
 <body>
-    <h1 id="mainHeader">Bem vindo!</h1>
-    <p>Olá. Meu nome é Jordan e sou um perpétuo estudante.</p>
+    <main>
+        <header>
+            <h1>Vincent Jordan</h1>
+            <div id="tmin"></div>
+            <div id="qmax"></div>
+            <div id="xclose"></div>
+        </header>
+        
+        <section id="about" class="fl">
+    
+        </section>
+    
+        <section id="contacts" class="fl">
+    
+        </section>
+    
+        <section id="subjects" class="fl">
+    
+        </section>
+    
+        <section id="skills" class="fl">
+    
+        </section>
+    </main>
 </body>
 </html>
