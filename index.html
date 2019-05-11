@@ -11,6 +11,7 @@
             box-sizing: border-box;
             margin: 0 auto;
             padding: 0;
+/*            border: 1px solid #00000050;*/
         }
         body,html{
             width: 100%;
@@ -23,7 +24,11 @@
             padding-top: 70px;
             padding-bottom: 30px;
             color: #1a231e;
+            overflow-y: scroll;
+        }
+        p{
             font-size: 16px;
+            font-weight: 600;
         }
         .fl{
             float: left;
@@ -31,6 +36,24 @@
         #about, #contacts, #subjects, #skills{
             width: 50%;
             height: 25%;
+            padding: 5% 5%;
+            min-height: 200px;
+        }
+        #about p{
+            text-align: justify;
+        }
+        #contacts ul{
+            text-align: left;
+            padding-left: 20%;
+        }
+        #contacts li{
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+        }
+        #contacts img{
+            height: 1em;
+            width: 1em;
+            margin-bottom: -3px;
         }
         main{
             width: 90%;
@@ -41,15 +64,12 @@
             height: 100%;
             background-color: #7ea7af;
             border-radius: 5px;
+            box-sizing: content-box;
         }
         main header{
             width: 100%;
-            height: 25%;
             padding: 0;
             /*background-image: radial-gradient(farthest-corner at 50% 0%, #829191 70%, transparent 70%);*/
-        }
-        #tmin:hover, #qmax:hover, #xclose:hover{
-            cursor: pointer;
         }
         #avatar{
             height: 120px;
@@ -58,20 +78,48 @@
             border-radius: 50%;
             margin-top: -60px;
             /*border: 5px solid #747578;*/
-            border-top: 3px solid #747578;
-            border-left: 3px solid #747578;
-            border-right: 3px solid #d4f5f5;
-            border-bottom: 3px solid #d4f5f5;
+            border-top: 3px solid #d4f5f5;
+            border-left: 3px solid #d4f5f5;
+            border-right: 3px solid #747578;
+            border-bottom: 3px solid #747578;
         }
         #avatar img{
             height: 100%;
             width: 100%;
+        }
+        #hab{
+            text-align: right;
+            padding-right: 5%;
+        }
+        #hab, #barras{
+            float: left;
+            width: 50%;
+        }
+        #barras hr{
+            width: 100%;
+            height: 1em;
+            border-radius: 8px 8px 8px 8px;
         }
         h1{font-size: 2em;}
         h2{font-size: 1.5em;}
         h3{font-size: 1em;}
         h4{font-size: 0.8em;}
         h5{font-size: 0.5em;}
+        .fll{
+            float: left;
+        }
+        .vazia{
+            border: 1px solid #747578;
+            
+        }
+        .color{
+            background-color: #d4f5f5;
+            margin-left: -100%;
+            
+        }
+        #subs{
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
@@ -82,26 +130,85 @@
 
         <header>
             <h1>Vincent Jordan</h1>
-            <h2>Vincent Jordan</h2>
-            <h3>Vincent Jordan</h3>
-            <h4>Vincent Jordan</h4>
-            <h5>Vincent Jordan</h5>
         </header>
 
         <section id="about" class="fl">
+            <br>
             <h2>Sobre:</h2>
+            <br>
+            <p>
+                Brasileiro, 29 anos.<br>
+                Trabalho com programação, um dos meus sonhos.<br>
+                Qualquer um pode mudar o que penso instantaneamente, desde que tenha um argumento bom o suficiente.
+            </p>
         </section>
     
         <section id="contacts" class="fl">
+            <br>
             <h2>Contatos:</h2>
+            <br>
+            <ul>
+                <li>
+                   <img src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico" alt="gmail">
+                   <a href="mailto:vjordanmc@gmail.com" target="_blank">vjordanmc@gmail.com</a>
+                </li>
+                <li>
+                    <img src="https://web.whatsapp.com/img/c5088e888c97ad440a61d247596f88e5.png" alt="whatsapp">
+                    <a href="http://web.whatsapp.com/send?1=pt_BR&phone=5562983000568" target="_blank">+55 62 983000568</a>
+                </li>
+                <li>
+                    <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="instagram">
+                    <a href="https://www.instagram.com/vjordanmc/">@vjordanmc</a>
+                </li>
+                <li>
+                    <img src="https://steamcommunity.com/favicon.ico" alt="steam">
+                    <a href="https://steamcommunity.com/id/Vjordanmc">Vjordanmc</a>
+                </li>
+            </ul>
         </section>
-    
+        
         <section id="subjects" class="fl">
+            <br>
             <h2>Áreas de interesse:</h2>
+            <br>
+            <div id="subs">
+                <a href="https://www.google.com/search?q=Javascript">Javascript</a>
+                <a href="https://www.google.com/search?q=HTML">HTML</a>
+                <a href="https://www.google.com/search?q=CSS">CSS</a>
+                <a href="https://www.google.com/search?q=User Interface">User Interface</a>
+                <a href="https://www.google.com/search?q=Tecnologia">Tecnologia</a>
+                <a href="https://www.google.com/search?q=Economia">Economia</a>
+                <a href="https://www.google.com/search?q=Games">Games</a>
+                <a href="https://www.google.com/search?q=Filosofia">Filosofia</a>
+                <a href="https://www.google.com/search?q=Psicologia">Psicologia</a>
+                <a href="https://www.google.com/search?q=Antropologia">Antropologia</a>
+                <a href="https://www.google.com/search?q=Astronomia">Astronomia</a>
+                <a href="https://www.google.com/search?q=Bushcraft">Bushcraft</a>
+                <a href="https://www.google.com/search?q=Gastronomia">Gastronomia</a>
+                <a href="https://www.google.com/search?q=Música">Música</a>
+            </div>
         </section>
     
         <section id="skills" class="fl">
+            <br>
             <h2>Habilidades:</h2>
+            <br>
+            <div id="hab">
+                tal coisa <br>
+                tal coisa <br>
+                tal coisa <br>
+                tal coisa <br>
+            </div>
+            <div id="barras">
+                <hr class="fll vazia">
+                <hr class="color" style="width:80%;">
+                <hr class="fll vazia">
+                <hr class="color" style="width:70%;">
+                <hr class="fll vazia">
+                <hr class="color" style="width:90%;">
+                <hr class="fll vazia">
+                <hr class="color" style="width:40%;">
+            </div>
         </section>
     </main>
 </body>
