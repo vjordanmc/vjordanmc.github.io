@@ -7,19 +7,30 @@
 }
 body,html{
     width: 100%;
-    
+    height: 100%;
 }
 body{
     font-family: 'Anonymous Pro', monospace;
-    background-color: #554348;
+    /* background-color: #554348; */
+    background-image: radial-gradient(
+        circle farthest-corner at 85% 10%,
+        #fdfcef 10%,
+        #ffe816 15%,
+        #db890d,
+        #914d00,
+        #03001e 80%
+    );
+    background-repeat: no-repeat;
+    background-size: cover ;
     text-align: center;
-    padding-top: 70px;
-    padding-bottom: 30px;
+    padding-top: 5%;
+    padding-bottom: 0px;
     color: #1a231e;
     overflow-y: scroll;
     box-sizing: content-box;
     display: flex;
     flex-flow: column;
+    height: 100%;
 }
 p{
     font-size: 16px;
@@ -54,12 +65,14 @@ p{
 }
 #main{
     width: 90%;
-    border-top: 3px solid #747578;
+    /* border-top: 3px solid #747578;
     border-left: 3px solid #747578;
     border-right: 3px solid #d4f5f5;
-    border-bottom: 3px solid #d4f5f5;
+    border-bottom: 3px solid #d4f5f5; */
     height: 100%;
-    background-color: #7ea7af;
+    /* background-color: #7ea7afff; */
+    background-image: radial-gradient(circle farthest-corner at 85% 10%, transparent, #fdfcef);
+    opacity: 1;
     border-radius: 5px;
     min-height: 320px;
     min-width: 568px; /*iphone 5*/
@@ -75,12 +88,14 @@ p{
     width: 120px;
     overflow: hidden;
     border-radius: 50%;
-    margin-top: -60px;
+    margin-top: 0px;
     /*border: 5px solid #747578;*/
     border-top: 3px solid #d4f5f5;
     border-left: 3px solid #d4f5f5;
     border-right: 3px solid #747578;
     border-bottom: 3px solid #747578;
+    float: right;
+    margin-right: 5%;
 }
 #avatar img{
     height: 100%;
@@ -115,19 +130,19 @@ h3{font-size: 1em;}
 h4{font-size: 0.8em;}
 h5{font-size: 0.5em;}
 .hab1{
-    background-image: linear-gradient(to right, #d4f5f5 75%, transparent 75%);
+    background-image: linear-gradient(to right, #ffe816 75%, transparent 75%);
 }
 .hab2{
-    background-image: linear-gradient(to right, #d4f5f5 85%, transparent 85%);
+    background-image: linear-gradient(to right, #ffe816 85%, transparent 85%);
 }
 .hab3{
-    background-image: linear-gradient(to right, #d4f5f5 80%, transparent 80%);
+    background-image: linear-gradient(to right, #ffe816 80%, transparent 80%);
 }
 .hab4{
-    background-image: linear-gradient(to right, #d4f5f5 100%, transparent 100%);
+    background-image: linear-gradient(to right, #ffe816 100%, transparent 100%);
 }
 .hab5{
-    background-image: linear-gradient(to right, #d4f5f5 100%, transparent 100%);
+    background-image: linear-gradient(to right, #ffe816 100%, transparent 100%);
 }
 #subs{
     text-align: justify;
