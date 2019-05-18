@@ -50,19 +50,16 @@ body{
 }
 .but1{
     background-color: #fdfcef;
-    background-image: url("/IMG/activity.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .but2{
     background-color: #ffe816;
-    background-image: url("/IMG/lightbulb.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .but3{
     background-color: #db890d;
-    background-image: url("/IMG/chat.svg");
     background-repeat: no-repeat;
     background-size: cover;
 }
