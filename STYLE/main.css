@@ -116,13 +116,27 @@ footer img:hover{
 .widfoot:hover{
     max-width: 320px;
 }
+
+main{
+    padding-left: 80px;
+    padding-top: 40px;
+    height: 100%;
+}
+
 #sobre{
-    display: none;
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
-    color: white;
-    z-index: 10000;
+    /* display: none; */
+    height: 80%;
+    width: 60%;
+    background-color: #03001e;
+    background: -webkit-linear-gradient(#db890d, #914d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#sobre p{
+    text-align: justify;
+}
+#sobre img{
+    max-height: 1em;
 }
 #habilidades{
     display: none;
@@ -185,5 +199,9 @@ footer img:hover{
             #db890d
         );
         
+    }
+    main{
+        padding-top: 80px;
+        padding-left: 0;
     }
 }
