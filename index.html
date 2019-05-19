@@ -6,28 +6,34 @@
     <title>Vincent Jordan</title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
     <link rel="stylesheet" href="STYLE/main.css">
+    <script src="/JS/main.js"></script>
 </head>
-<body>
+<body onload="sobreClick()">
     <header>
 
     </header>
     <div id="menu">
         <div class="avatar"></div>
         <nav>
-            <button class="but1" url="#sobre" type="button">
+            <button class="but1" url="#sobre" type="button" onclick="sobreClick()">
                 <img src="/IMG/activity.svg" alt="Sobre">
             </button>
-            <button class="but2" url="#habilidades" type="button">
+            <button class="but2" url="#habilidades" type="button" onclick="habiliClick()">
                 <img src="/IMG/lightbulb.svg" alt="Habilidades">
             </button>
-            <button class="but3" url="#contato" type="button">
+            <button class="but3" url="#contato" type="button" onclick="contatoClick()">
                 <img src="/IMG/chat.svg" alt="Contato">
             </button>
         </nav>
-    </div id="menu">
+    </div>
     
     <main>
-        
+        <div id="sobre">
+        </div>
+        <div id="habilidades">
+        </div>
+        <div id="contato">
+        </div>
     </main>
     
     <footer>

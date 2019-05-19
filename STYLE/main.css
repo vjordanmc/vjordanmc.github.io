@@ -116,6 +116,33 @@ footer img:hover{
 .widfoot:hover{
     max-width: 320px;
 }
+#sobre{
+    display: none;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    color: white;
+    z-index: 10000;
+}
+#habilidades{
+    display: none;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    z-index: 10000;
+}
+#contato{
+    display: none;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    z-index: 10000;
+}
+
+/* ------------------------------------------- */
+
 @media (orientation: portrait){
     .avatar{
         width: 65px;
