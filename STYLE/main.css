@@ -42,7 +42,7 @@ body{
         #03001e 80%
     );
 }
-#menu button{
+#menu button, #contato button{
     width: 55px;
     height: 55px;
     margin: 1em auto;
@@ -56,7 +56,7 @@ body{
         transparent 80%
     );
 }
-#menu button:hover{
+#menu button:hover, #contato button:hover{
     border-top: 1px solid #03001e66;
     border-left: 3px solid #03001e88;
     border-right: 3px solid #03001e88;
@@ -67,7 +67,7 @@ body{
         transparent 80%
     );
 }
-#menu button:active{
+#menu button:active, #contato button:active{
     border-top: 3px solid #03001eaa;
     border-left: 2px solid #03001e88;
     border-right: 2px solid #03001e88;
@@ -128,7 +128,6 @@ main{
     display: none;
     height: 100%;
     width: 60%;
-    background-color: #03001e;
     background: -webkit-linear-gradient(#db890d, #914d00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -146,24 +145,73 @@ h1{
 }
 #habilidades{
     display: none;
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    color: white;
-    z-index: 10000;
+    height: 100%;
+    width: 60%;
+    color: #db890d;
 }
 #contato{
-    display: none;
-    height: 100px;
-    width: 100px;
-    background-color: blue;
-    color: white;
-    z-index: 10000;
+    /* display: none; */
+    color: #db890d;
+    height: 100%;
+    width: 60%;
+    text-align: center;
+}
+#contatoNome, #contatoEmail{
+    width: 100%;
+}
+#contatoMsg{
+    height: 25%;
+    width: 100%;
+    text-align: left;
+}
+#contato div{
+    padding: 10px 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+#contato p{
+    padding-bottom: 10px;
+}
+textarea{
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+}
+#contato button{
+    width: 55px;
+    height: 55px;
+    margin: 1em auto;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #03001e88;
+    transition-duration: 100ms;
+    background-image: radial-gradient(
+        circle farthest-corner at 50% 0,
+        #db890d,
+        #914d00,
+        #03001e
+    );
+}
+#contato button:hover{
+    background-image: radial-gradient(
+        circle farthest-corner at 50% 0,
+        #db890d,
+        #914d00
+    );
+}
+#contato button:active{
+    background-image: radial-gradient(
+        circle farthest-corner at 50% 0,
+        #914d00,
+        #db890d
+    );
 }
 
 /* ------------------------------------------- */
 
 @media (orientation: portrait){
+    nav{
+        float: right;
+    }
     .avatar{
         width: 65px;
         height: 65px;
@@ -182,7 +230,6 @@ h1{
         text-align: center;
     }
     #menu button{
-        float: right;
         margin: 5px;
         background-image: radial-gradient(
             circle farthest-corner at 50% 0,
@@ -204,7 +251,6 @@ h1{
             #914d00,
             #db890d
         );
-        
     }
     main{
         padding-top: 80px;
