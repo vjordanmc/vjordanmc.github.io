@@ -1,6 +1,6 @@
 # https://vjordanmc.github.io/
 
-![GitHub repo size](https://img.shields.io/github/repo-size/vjordanmc/vjordanmc.github.io.git)
+![GitHub repo size](https://img.shields.io/github/repo-size/vjordanmc/vjordanmc.github.io)
 ![GitHub stars](https://img.shields.io/github/stars/vjordanmc/vjordanmc.github.io.git?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/vjordanmc/vjordanmc.github.io.git?style=social)
 ![Twitter Follow](https://img.shields.io/github/followers/vjordanmc?style=social)
