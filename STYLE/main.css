@@ -109,6 +109,12 @@ footer img:hover{
     margin: auto;
     height: 100%
 }
+.trinta3{
+    width: 33%;
+    float: left;
+    margin: auto;
+    height: 100%
+}
 .widfoot{
     max-width: 300px;
     transition-duration: 100ms;
