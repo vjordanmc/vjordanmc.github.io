@@ -26,7 +26,7 @@ Actually it ain't my intent to get contributors to this project, but feel free t
 
 Thanks to the following people who have contributed to this project:
 
-* [https://github.com/PearcyXF](@PearcyXF) 🚧💻💬🐛 
+* [@PearcyXF](https://github.com/PearcyXF) 🚧💻💬🐛 
 
 ## License 
 
