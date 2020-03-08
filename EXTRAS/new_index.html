@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +7,42 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <title>...</title>
-    <style>
-        /*  */
-        @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
-
-        body, html{
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        body{
-            box-sizing: border-box;
-            background-color: #666;
-        }
-        #mn, #mn .col-12{
-            width: 100%;
-            height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        #pg1{
-            /* background-image: linear-gradient(45rad , red,green); */
-            background-image: url("./img/bggr.jpg");
-        }
-        #pg2{
-            /* background-image: linear-gradient(45rad, yellow,purple); */
-            background-image: url("./img/bgrd.jpg");
-        }
-        #pg3{
-            /* background-image: linear-gradient(-45deg, orange,blue); */
-            background-image: url("./img/bgbl.jpg");
-        }
-    </style>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>VJordanMC</title>
 </head>
 <body>
-    <div id="mn" class="row">
-        <div id="pg1" class="col-12">
+    <section id="pg1">
+    </section>
+    <section id="pg2">
+    </section>
+    <section id="pg3" class="d-flex justify-content-center">
+        <div class="contribute col-6 align-self-center">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <div class="fullW">
+                    <h5>Do you want to support my learning, career or projects?</h5>
+                    <h5>Collaborate with as much as you want (BRL):</h5>
+                </div>
+                <input type="hidden" name="currency_code" value="BRL">
+                <input type="hidden" name="hosted_button_id" value="ZVLHRBYM3D8M6">
+                <div class="options row d-flex justify-content-center">
+                    <div class="col-7">
+                        <select class="custom-select mr-sm-2" name="os0">
+                            <option value="Kilo">Kilo R$2,50</option>
+                            <option value="Mega">Mega R$5,00</option>
+                            <option value="Giga">Giga R$7,50</option>
+                            <option value="Tera">Tera R$10,00</option>
+                            <option value="WTF?">WTF? R$100,00</option>
+                        </select>
+                    </div>
+                    <div class="col-5">
+                        <input type="image" name="submit" alt="Confirm" class="btn fullW btn-success">
+                    </div>
+                </div>
+            </form>
         </div>
-        <div id="pg2" class="col-12">
-        </div>
-        <div id="pg3" class="col-12">
-        </div>
-    </div>
+    </section>
     <script>
     </script>
 </body>

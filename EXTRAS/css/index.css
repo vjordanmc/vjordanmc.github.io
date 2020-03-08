@@ -1,0 +1,26 @@
+#pg1{
+    /* background-image: linear-gradient(45rad , red,green); */
+    background-image: url("../img/bggr.jpg");
+}
+#pg2{
+    /* background-image: linear-gradient(45rad, yellow,purple); */
+    background-image: url("../img/bgrd.jpg");
+}
+#pg3{
+    /* background-image: linear-gradient(-45deg, orange,blue); */
+    background-image: url("../img/bgbl.jpg");
+}
+.contribute{
+    background-color: rgba(223, 223, 223, 0.9);
+    min-width: 535px;
+    padding: 20px;
+    border-radius: 15px;
+}
+input[name="submit"]:hover{
+    border: lawngreen 1px solid;
+}
+.options{
+}
+.options>div{
+    margin: 10px auto;
+}
