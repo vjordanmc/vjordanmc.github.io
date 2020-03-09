@@ -38,3 +38,9 @@ section{
 .mza{
     margin: 0 auto;
 }
+.fll{
+    float: left;
+}
+.flr{
+    float: right;
+}

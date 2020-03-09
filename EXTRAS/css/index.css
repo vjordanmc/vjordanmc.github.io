@@ -13,7 +13,7 @@
 .contribute{
     background-color: rgba(223, 223, 223, 0.9);
     min-width: 535px;
-    padding: 20px;
+    padding: 50px;
     border-radius: 15px;
 }
 input[name="submit"]:hover{
@@ -23,4 +23,22 @@ input[name="submit"]:hover{
 }
 .options>div{
     margin: 10px auto;
+}
+.call{
+    margin-bottom: 30px;
+}
+.selector *{
+    font-family: monospace;
+}
+section{
+    z-index: 999;
+}
+#modal{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10,10,10,0.9);
 }

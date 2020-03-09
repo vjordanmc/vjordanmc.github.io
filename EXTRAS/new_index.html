@@ -9,35 +9,36 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/doge.js"></script>
     <title>VJordanMC</title>
 </head>
-<body>
+<body id="body">
     <section id="pg1">
     </section>
     <section id="pg2">
     </section>
     <section id="pg3" class="d-flex justify-content-center">
         <div class="contribute col-6 align-self-center">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <div class="fullW">
+                <div class="fullW call">
                     <h5>Do you want to support my learning, career or projects?</h5>
-                    <h5>Collaborate with as much as you want (BRL):</h5>
+                    <h5>Choose a value to continue (BRL):</h5>
                 </div>
                 <input type="hidden" name="currency_code" value="BRL">
                 <input type="hidden" name="hosted_button_id" value="ZVLHRBYM3D8M6">
                 <div class="options row d-flex justify-content-center">
-                    <div class="col-7">
+                    <div class="selector col-7">
                         <select class="custom-select mr-sm-2" name="os0">
-                            <option value="Kilo">Kilo R$2,50</option>
-                            <option value="Mega">Mega R$5,00</option>
-                            <option value="Giga">Giga R$7,50</option>
-                            <option value="Tera">Tera R$10,00</option>
-                            <option value="WTF?">WTF? R$100,00</option>
+                            <option value="Kilo">Coffee...R$2,50</option>
+                            <option value="Mega">Snacks...R$5,00</option>
+                            <option value="Giga">Lunch....R$7,50</option>
+                            <option value="Tera">Dinner..R$10,00</option>
+                            <option value="WTF?">Sushi..R$100,00</option>
                         </select>
                     </div>
                     <div class="col-5">
-                        <input type="image" name="submit" alt="Confirm" class="btn fullW btn-success">
+                        <input type="image" name="submit" alt="Confirm" class="btn fullW btn-success" onclick="doge()">
                     </div>
                 </div>
             </form>
