@@ -42,3 +42,33 @@ section{
     height: 100vh;
     background-color: rgba(10,10,10,0.9);
 }
+#buttonClose{
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/buttonClose.png");
+    transition:ease 0.3s;
+}
+#buttonClose:hover{
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+#doge{
+    width: 80vh;
+    height: 80vh;
+    z-index: 1001;
+    background-image: url("../img/doge.png");
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
