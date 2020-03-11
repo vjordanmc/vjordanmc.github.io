@@ -1,8 +1,10 @@
 /*  */
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 * {
     box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
 }
 html, body{
     margin: 0;

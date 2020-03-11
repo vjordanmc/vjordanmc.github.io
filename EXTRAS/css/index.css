@@ -27,9 +27,6 @@ input[name="submit"]:hover{
 .call{
     margin-bottom: 30px;
 }
-.selector *{
-    font-family: monospace;
-}
 section{
     z-index: 999;
 }
@@ -44,7 +41,7 @@ section{
 }
 #buttonClose{
     position: fixed;
-    z-index: 1001;
+    z-index: 1002;
     top: 0;
     right: 0;
     margin-right: 30px;
@@ -65,10 +62,19 @@ section{
 #doge{
     width: 80vh;
     height: 80vh;
-    z-index: 1001;
+    z-index: 1002;
     background-image: url("../img/doge.png");
     background-position: center;
     background-size: cover;
     margin: 0 auto;
     margin-top: 10vh;
+    border: 1px solid whitesmoke;
+}
+#modalClose{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
