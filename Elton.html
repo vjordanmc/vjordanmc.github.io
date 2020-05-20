@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helton</title>
+    <script>
+        var tempo = new Date()
+
+        function getFrase(opc){
+            switch(opc){
+                case 1:
+                    msg = 'Não é assim, Helton.'
+                    break
+                case 2:
+                    msg = 'De novo Helton?'
+                    break
+                case 3:
+                    msg = 'Isso tudo por causa do Helton.'
+                    break
+                case 4:
+                    msg = 'Isso tudo por causa do Helton.'
+                    break
+                case 5:
+                    msg = 'Não, Helton, não é o documento.'
+                    break
+                case 6:
+                    msg = 'Helton, você tem que tratar disso agora, na reunião? Sério?'
+                    break
+                case 7:
+                    msg = 'Não, Helton, não é no sistema.'
+                    break
+                case 8:
+                    msg = 'Gente, eu não vou falar mais nada pro Helton.'
+                    break
+                case 9:
+                    msg = 'Quantas vezes tenho que te falar, Helton?'
+                    break
+                case 10:
+                    msg = 'Claro que eu tenho certeza, Helton.'
+                    break
+                case 11:
+                    msg = 'Não, Helton, tem que concluir a outra etapa antes.'
+                    break
+                case 12:
+                    msg = 'Ah não Helton!'
+                    break
+                case 13:
+                    msg = 'Cala a boca Helton!'
+                    break
+                default:
+                    msg = 'Helton...'
+                    break
+            }
+            document.getElementById('texto').innerHTML = msg
+            console.log(msg)
+            return msg
+        }
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min)
+            max = Math.floor(max)
+            value = Math.floor(Math.random() * (max - min)) + min
+            console.log(value)
+            return value
+        }
+
+        function Helton() {
+            play();
+            async function play() {
+                async function getAudio(frase) {
+                    let audio = new SpeechSynthesisUtterance(frase);
+                    window.speechSynthesis.speak(audio);
+                    return new Promise(resolve => {
+                        audio.onend = resolve;
+                        console.log(tempo)
+                    });
+                } 
+
+                await getAudio(getFrase(getRandomInt(0,13)))
+            }
+        }
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        html,body{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+        }
+        h1{
+            height: 1em;
+            width: 90%;
+            margin: 0 auto;
+        }
+        div{
+            width: 90%;
+            margin: 0 auto;
+        }
+        button{
+            margin-top: 50px;
+            width: 100px;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px blue inset;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="texto"></h1>
+        <button onclick="Helton()"> Plêi </button>
+    </div>
+</body>
+</html>
