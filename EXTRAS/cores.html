@@ -98,7 +98,7 @@
                 da5=parseInt(htd(a.substr(4,1)));
                 da6=parseInt(htd(a.substr(5,1)));
                 da7=parseInt(htd(a.substr(6,1)));
-                hsa='#'+htd(dth(a.substr(0,1)))+htd(dth(a.substr(1,1)))+htd(dth(a.substr(2,1)))+htd(dth(a.substr(3,1)))+htd(dth(a.substr(4,1)))+htd(dth(a.substr(5,1)));
+                hsa='#'+dth(htd(a.substr(0,1)))+dth(htd(a.substr(1,1)))+dth(htd(a.substr(2,1)))+dth(htd(a.substr(3,1)))+dth(htd(a.substr(4,1)))+dth(htd(a.substr(5,1)));
             }else{
                 da2=parseInt(htd(a.substr(0,1)));
                 da3=parseInt(htd(a.substr(1,1)));
@@ -106,7 +106,7 @@
                 da5=parseInt(htd(a.substr(3,1)));
                 da6=parseInt(htd(a.substr(4,1)));
                 da7=parseInt(htd(a.substr(5,1)));
-                hsa='#'+htd(dth(a.substr(1,1)))+htd(dth(a.substr(2,1)))+htd(dth(a.substr(3,1)))+htd(dth(a.substr(4,1)))+htd(dth(a.substr(5,1)))+htd(dth(a.substr(6,1)));
+                hsa='#'+dth(htd(a.substr(1,1)))+dth(htd(a.substr(2,1)))+dth(htd(a.substr(3,1)))+dth(htd(a.substr(4,1)))+dth(htd(a.substr(5,1)))+dth(htd(a.substr(6,1)));
             }
             console.log('Hash 1:'+hsa)
             document.getElementById("hs1").parentElement.style.borderColor=hsa;
@@ -117,7 +117,7 @@
                 db5=parseInt(htd(b.substr(4,1)));
                 db6=parseInt(htd(b.substr(5,1)));
                 db7=parseInt(htd(b.substr(6,1)));
-                hsb='#'+htd(dth(b.substr(1,1)))+htd(dth(b.substr(2,1)))+htd(dth(b.substr(3,1)))+htd(dth(b.substr(4,1)))+htd(dth(b.substr(5,1)))+htd(dth(b.substr(6,1)));
+                hsb='#'+dth(htd(b.substr(1,1)))+dth(htd(b.substr(2,1)))+dth(htd(b.substr(3,1)))+dth(htd(b.substr(4,1)))+dth(htd(b.substr(5,1)))+dth(htd(b.substr(6,1)));
             }else{
                 db2=parseInt(htd(b.substr(0,1)));
                 db3=parseInt(htd(b.substr(1,1)));
@@ -125,7 +125,7 @@
                 db5=parseInt(htd(b.substr(3,1)));
                 db6=parseInt(htd(b.substr(4,1)));
                 db7=parseInt(htd(b.substr(5,1)));
-                hsb='#'+htd(dth(b.substr(0,1)))+htd(dth(b.substr(1,1)))+htd(dth(b.substr(2,1)))+htd(dth(b.substr(3,1)))+htd(dth(b.substr(4,1)))+htd(dth(b.substr(5,1)));
+                hsb='#'+dth(htd(b.substr(0,1)))+dth(htd(b.substr(1,1)))+dth(htd(b.substr(2,1)))+dth(htd(b.substr(3,1)))+dth(htd(b.substr(4,1)))+dth(htd(b.substr(5,1)));
             }
             console.log('Hash 2:'+hsb)
             document.getElementById("hs2").parentElement.style.borderColor=hsb;
