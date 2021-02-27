@@ -1,80 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Vincent Jordan</title>
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
-    <link rel="stylesheet" href="./STYLE/main.css">
-    <script src="./JS/main.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+        a {
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        body {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: indigo;
+            color: whitesmoke;
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            
+            text-align: center;
+            font-size: 12vw;
+            line-height: 1em;
+            z-index: 1000;
+            font-weight: 900;
+        }
+
+        h2 span {
+            font-size: 0.2em;
+            letter-spacing: 0.4em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        a {
+            font-size: 0.2em;
+            font-weight: 400;
+            color: whitesmoke;
+            background-color: transparent;
+        }
+
+        .block {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            background: indigo;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 105, 180, 0.3);
+            border-top: 1px solid rgba(127, 255, 212, 0.3);
+        }
+    </style>
 </head>
-<body onload="sobreClick()">
-    <header>
 
-    </header>
-    <div id="menu">
-        <div class="avatar"></div>
-        <nav>
-            <button class="but1" url="#sobre" type="button" onclick="sobreClick()">
-                <img src="./IMG/activity.svg" alt="Sobre">
-            </button>
-            <button class="but2" url="#habilidades" type="button" onclick="habiliClick()">
-                <img src="./IMG/lightbulb.svg" alt="Habilidades">
-            </button>
-            <button class="but3" url="#contato" type="button" onclick="contatoClick()">
-                <img src="./IMG/chat.svg" alt="Contato">
-            </button>
-            <button class="but4" onClick="window.open('./EXTRAS/cores.html');" type="button">
-                <img src="./IMG/window.svg" alt="Color mixer">
-            </button>
-        </nav>
+<body>
+    <div class="container">
+        <h2><span>Transforming ideas into</span><br>Solutions<br><a target="_blank"
+                href="https://web.whatsapp.com/send?phone=5562983000568">• Get in touch •</a></h2>
     </div>
-    
-    <main>
-        <div id="sobre">
-            <h1>Olá, eu sou Jordan.</h1>
-            <p><img src="./IMG/br.png" alt="Brasil">, 29.</p>
-            <p>Programador.</p>
-            <p>Busco me atualizar com as ferramentas e soluções atuais de desenvolvimento Web.</p>
-            <p>Me interesso por uma gama de assuntos, cada um em uma profundidade. Todo conhecimento é bem vindo, desde que bem apresentado.</p>
-        </div>
+    <script src="./anime.js"></script>
+    <script>
+        const container = document.querySelector('.container');
+        for (let i = 0; i < 64; i++) {
+            const blocks = document.createElement('div');
+            blocks.classList.add('block');
+            container.appendChild(blocks);
+        }
 
-        <div id="habilidades">
-        </div>
-
-        <div id="contato">
-            <h1>Me envie sua mensagem:</h1>
-            <div>
-                <p>Nome:</p>
-                <input type="text" id="contatoNome"><br>
-            </div>
-            <div>
-                <p>Email:</p>
-                <input type="email" id="contatoEmail"><br>
-            </div>
-            <div>
-                <p>Mensagem:</p>
-                <textarea name="" id="contatoMsg" cols="30" rows="10"></textarea><br>
-            </div>
-            <button id="enviarEmail" onclick="enviarEMail()">
-                <img src="./IMG/send.svg" alt="Enviar">
-            </button>
-        </div>
-    </main>
-    
-    <footer>
-        <div class="widfoot">
-            <div class="cinco0">
-                <a href="mailto:vjordanmc@gmail.com" target="_blank">
-                    <img src="./IMG/gmail.png" alt="gmail">
-                </a>
-            </div>
-            <div class="cinco0">
-                <a href="http://web.whatsapp.com/send?phone=5562983000568" target="_blank">
-                    <img src="./IMG/whats.png" alt="whatsapp">
-                </a>
-            </div>
-        </div>
-    </footer>
+        function animateBlocks() {
+            anime({
+                targets: '.block',
+                translateX: function () {
+                    return anime.random(-800, 800)
+                },
+                translateY: function () {
+                    return anime.random(-400, 400)
+                },
+                scale: function () {
+                    return anime.random(1, 5)
+                },
+                // easing: 'linear',
+                duration: 5000,
+                delay: anime.stagger(10),
+                complete: animateBlocks,
+            })
+        }
+        animateBlocks();
+    </script>
 </body>
+
 </html>
