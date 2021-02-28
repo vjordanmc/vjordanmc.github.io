@@ -1,48 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VJordanMC</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h2><span>Transforming ideas into</span><br>Solutions<br><a target="_blank"
-                href="https://web.whatsapp.com/send?phone=5562983000568">• Get in touch •</a></h2>
+      <h2>
+        <span>Transforming ideas into</span><br />
+        Solutions<br />
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=5562983000568">• Get in touch •</a>
+      </h2>
     </div>
+    <label class="switch">
+      <input type="checkbox" default="checked" />
+      <span class="slider" onclick="stopAnimation()"></span>
+    </label>
     <script src="./anime.js"></script>
-    <script>
-        const container = document.querySelector('.container');
-        for (let i = 0; i < 64; i++) {
-            const blocks = document.createElement('div');
-            blocks.classList.add('block');
-            container.appendChild(blocks);
-        }
-
-        function animateBlocks() {
-            anime({
-                targets: '.block',
-                translateX: function () {
-                    return anime.random(-800, 800)
-                },
-                translateY: function () {
-                    return anime.random(-400, 400)
-                },
-                scale: function () {
-                    return anime.random(1, 5)
-                },
-                // easing: 'linear',
-                duration: 5000,
-                delay: anime.stagger(10),
-                complete: animateBlocks,
-            })
-        }
-        animateBlocks();
-    </script>
-</body>
-
+    <script src="./animating.js"></script>
+  </body>
 </html>

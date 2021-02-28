@@ -924,7 +924,7 @@ function anime(params) {
   var resolve = null;
 
   function makePromise(instance) {
-    var promise = window.Promise && new Promise(function (_resolve) { return resolve = _resolve; });
+    let promise = window.Promise && new Promise(function (_resolve) { return resolve = _resolve; });
     instance.finished = promise;
     return promise;
   }
