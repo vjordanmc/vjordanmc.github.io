@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS color picker</title>
+  </head>
+  <body>
+    <h1>The ultimate named css colors picker</h1>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+        line-height: 1.5;
+        color: rgb(25, 26, 27);
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        row-gap: 2rem;
+      }
+
+      h1 {
+        width: 100%;
+        height: 4rem;
+        position: sticky;
+        display: grid;
+        place-content: center;
+        font-size: 2rem;
+        overflow: hidden;
+        top: 0px;
+      }
+
+      div {
+        width: 80%;
+        height: 4rem;
+        border-radius: 4px;
+        background-image: linear-gradient(
+          90deg,
+          transparent 32px,
+          rgba(255, 255, 255, 0.5) 32px,
+          rgba(255, 255, 255, 0.5) calc(100% - 32px),
+          transparent calc(100% - 32px)
+        );
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        transition: ease-out 300ms;
+      }
+
+      h1,
+      div:hover {
+        box-shadow: 0px 4px 6px rgba(25, 26, 27, 0.5);
+      }
+
+      .selected {
+        border: 5px solid rgb(25, 26, 27);
+      }
+
+      /* -- desktop -- */
+      @media only screen and (min-width: 600px) {
+        .toggle {
+          display: none;
+        }
+        body {
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          column-gap: 24px;
+          row-gap: 16px;
+        }
+        div {
+          width: 16rem;
+          height: 8rem;
+          display: initial;
+          border-radius: 8px;
+          background-image: linear-gradient(white 24px, transparent 24px);
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+
+      /* -- colors -- */
+      .bg-aliceblue {
+        background-color: aliceblue;
+      }
+      .bg-antiquewhite {
+        background-color: antiquewhite;
+      }
+      .bg-aqua {
+        background-color: aqua;
+      }
+      .bg-aquamarine {
+        background-color: aquamarine;
+      }
+      .bg-azure {
+        background-color: azure;
+      }
+      .bg-beige {
+        background-color: beige;
+      }
+      .bg-bisque {
+        background-color: bisque;
+      }
+      .bg-black {
+        background-color: black;
+      }
+      .bg-blanchedalmond {
+        background-color: blanchedalmond;
+      }
+      .bg-blue {
+        background-color: blue;
+      }
+      .bg-blueviolet {
+        background-color: blueviolet;
+      }
+      .bg-brown {
+        background-color: brown;
+      }
+      .bg-burlywood {
+        background-color: burlywood;
+      }
+      .bg-cadetblue {
+        background-color: cadetblue;
+      }
+      .bg-chartreuse {
+        background-color: chartreuse;
+      }
+      .bg-chocolate {
+        background-color: chocolate;
+      }
+      .bg-coral {
+        background-color: coral;
+      }
+      .bg-cornflowerblue {
+        background-color: cornflowerblue;
+      }
+      .bg-cornsilk {
+        background-color: cornsilk;
+      }
+      .bg-crimson {
+        background-color: crimson;
+      }
+      .bg-cyan {
+        background-color: cyan;
+      }
+      .bg-darkblue {
+        background-color: darkblue;
+      }
+      .bg-darkcyan {
+        background-color: darkcyan;
+      }
+      .bg-darkgoldenrod {
+        background-color: darkgoldenrod;
+      }
+      .bg-darkgray {
+        background-color: darkgray;
+      }
+      .bg-darkgrey {
+        background-color: darkgrey;
+      }
+      .bg-darkgreen {
+        background-color: darkgreen;
+      }
+      .bg-darkkhaki {
+        background-color: darkkhaki;
+      }
+      .bg-darkmagenta {
+        background-color: darkmagenta;
+      }
+      .bg-darkolivegreen {
+        background-color: darkolivegreen;
+      }
+      .bg-darkorange {
+        background-color: darkorange;
+      }
+      .bg-darkorchid {
+        background-color: darkorchid;
+      }
+      .bg-darkred {
+        background-color: darkred;
+      }
+      .bg-darksalmon {
+        background-color: darksalmon;
+      }
+      .bg-darkseagreen {
+        background-color: darkseagreen;
+      }
+      .bg-darkslateblue {
+        background-color: darkslateblue;
+      }
+      .bg-darkslategray {
+        background-color: darkslategray;
+      }
+      .bg-darkslategrey {
+        background-color: darkslategrey;
+      }
+      .bg-darkturquoise {
+        background-color: darkturquoise;
+      }
+      .bg-darkviolet {
+        background-color: darkviolet;
+      }
+      .bg-deeppink {
+        background-color: deeppink;
+      }
+      .bg-deepskyblue {
+        background-color: deepskyblue;
+      }
+      .bg-dimgray {
+        background-color: dimgray;
+      }
+      .bg-dimgrey {
+        background-color: dimgrey;
+      }
+      .bg-dodgerblue {
+        background-color: dodgerblue;
+      }
+      .bg-firebrick {
+        background-color: firebrick;
+      }
+      .bg-floralwhite {
+        background-color: floralwhite;
+      }
+      .bg-forestgreen {
+        background-color: forestgreen;
+      }
+      .bg-fuchsia {
+        background-color: fuchsia;
+      }
+      .bg-gainsboro {
+        background-color: gainsboro;
+      }
+      .bg-ghostwhite {
+        background-color: ghostwhite;
+      }
+      .bg-gold {
+        background-color: gold;
+      }
+      .bg-goldenrod {
+        background-color: goldenrod;
+      }
+      .bg-gray {
+        background-color: gray;
+      }
+      .bg-grey {
+        background-color: grey;
+      }
+      .bg-green {
+        background-color: green;
+      }
+      .bg-greenyellow {
+        background-color: greenyellow;
+      }
+      .bg-honeydew {
+        background-color: honeydew;
+      }
+      .bg-hotpink {
+        background-color: hotpink;
+      }
+      .bg-indianred {
+        background-color: indianred;
+      }
+      .bg-indigo {
+        background-color: indigo;
+      }
+      .bg-ivory {
+        background-color: ivory;
+      }
+      .bg-khaki {
+        background-color: khaki;
+      }
+      .bg-lavender {
+        background-color: lavender;
+      }
+      .bg-lavenderblush {
+        background-color: lavenderblush;
+      }
+      .bg-lawngreen {
+        background-color: lawngreen;
+      }
+      .bg-lemonchiffon {
+        background-color: lemonchiffon;
+      }
+      .bg-lightblue {
+        background-color: lightblue;
+      }
+      .bg-lightcoral {
+        background-color: lightcoral;
+      }
+      .bg-lightcyan {
+        background-color: lightcyan;
+      }
+      .bg-lightgoldenrodyellow {
+        background-color: lightgoldenrodyellow;
+      }
+      .bg-lightgray {
+        background-color: lightgray;
+      }
+      .bg-lightgrey {
+        background-color: lightgrey;
+      }
+      .bg-lightgreen {
+        background-color: lightgreen;
+      }
+      .bg-lightpink {
+        background-color: lightpink;
+      }
+      .bg-lightsalmon {
+        background-color: lightsalmon;
+      }
+      .bg-lightseagreen {
+        background-color: lightseagreen;
+      }
+      .bg-lightskyblue {
+        background-color: lightskyblue;
+      }
+      .bg-lightslategray {
+        background-color: lightslategray;
+      }
+      .bg-lightslategrey {
+        background-color: lightslategrey;
+      }
+      .bg-lightsteelblue {
+        background-color: lightsteelblue;
+      }
+      .bg-lightyellow {
+        background-color: lightyellow;
+      }
+      .bg-lime {
+        background-color: lime;
+      }
+      .bg-limegreen {
+        background-color: limegreen;
+      }
+      .bg-linen {
+        background-color: linen;
+      }
+      .bg-magenta {
+        background-color: magenta;
+      }
+      .bg-maroon {
+        background-color: maroon;
+      }
+      .bg-mediumaquamarine {
+        background-color: mediumaquamarine;
+      }
+      .bg-mediumblue {
+        background-color: mediumblue;
+      }
+      .bg-mediumorchid {
+        background-color: mediumorchid;
+      }
+      .bg-mediumpurple {
+        background-color: mediumpurple;
+      }
+      .bg-mediumseagreen {
+        background-color: mediumseagreen;
+      }
+      .bg-mediumslateblue {
+        background-color: mediumslateblue;
+      }
+      .bg-mediumspringgreen {
+        background-color: mediumspringgreen;
+      }
+      .bg-mediumturquoise {
+        background-color: mediumturquoise;
+      }
+      .bg-mediumvioletred {
+        background-color: mediumvioletred;
+      }
+      .bg-midnightblue {
+        background-color: midnightblue;
+      }
+      .bg-mintcream {
+        background-color: mintcream;
+      }
+      .bg-mistyrose {
+        background-color: mistyrose;
+      }
+      .bg-moccasin {
+        background-color: moccasin;
+      }
+      .bg-navajowhite {
+        background-color: navajowhite;
+      }
+      .bg-navy {
+        background-color: navy;
+      }
+      .bg-oldlace {
+        background-color: oldlace;
+      }
+      .bg-olive {
+        background-color: olive;
+      }
+      .bg-olivedrab {
+        background-color: olivedrab;
+      }
+      .bg-orange {
+        background-color: orange;
+      }
+      .bg-orangered {
+        background-color: orangered;
+      }
+      .bg-orchid {
+        background-color: orchid;
+      }
+      .bg-palegoldenrod {
+        background-color: palegoldenrod;
+      }
+      .bg-palegreen {
+        background-color: palegreen;
+      }
+      .bg-paleturquoise {
+        background-color: paleturquoise;
+      }
+      .bg-palevioletred {
+        background-color: palevioletred;
+      }
+      .bg-papayawhip {
+        background-color: papayawhip;
+      }
+      .bg-peachpuff {
+        background-color: peachpuff;
+      }
+      .bg-peru {
+        background-color: peru;
+      }
+      .bg-pink {
+        background-color: pink;
+      }
+      .bg-plum {
+        background-color: plum;
+      }
+      .bg-powderblue {
+        background-color: powderblue;
+      }
+      .bg-purple {
+        background-color: purple;
+      }
+      .bg-red {
+        background-color: red;
+      }
+      .bg-rosybrown {
+        background-color: rosybrown;
+      }
+      .bg-royalblue {
+        background-color: royalblue;
+      }
+      .bg-saddlebrown {
+        background-color: saddlebrown;
+      }
+      .bg-salmon {
+        background-color: salmon;
+      }
+      .bg-sandybrown {
+        background-color: sandybrown;
+      }
+      .bg-seagreen {
+        background-color: seagreen;
+      }
+      .bg-seashell {
+        background-color: seashell;
+      }
+      .bg-sienna {
+        background-color: sienna;
+      }
+      .bg-silver {
+        background-color: silver;
+      }
+      .bg-skyblue {
+        background-color: skyblue;
+      }
+      .bg-slateblue {
+        background-color: slateblue;
+      }
+      .bg-slategray {
+        background-color: slategray;
+      }
+      .bg-slategrey {
+        background-color: slategrey;
+      }
+      .bg-snow {
+        background-color: snow;
+      }
+      .bg-springgreen {
+        background-color: springgreen;
+      }
+      .bg-steelblue {
+        background-color: steelblue;
+      }
+      .bg-tan {
+        background-color: tan;
+      }
+      .bg-teal {
+        background-color: teal;
+      }
+      .bg-thistle {
+        background-color: thistle;
+      }
+      .bg-tomato {
+        background-color: tomato;
+      }
+      .bg-turquoise {
+        background-color: turquoise;
+      }
+      .bg-violet {
+        background-color: violet;
+      }
+      .bg-wheat {
+        background-color: wheat;
+      }
+      .bg-white {
+        background-color: white;
+      }
+      .bg-whitesmoke {
+        background-color: whitesmoke;
+      }
+      .bg-yellow {
+        background-color: yellow;
+      }
+      .bg-yellowgreen {
+        background-color: yellowgreen;
+      }
+    </style>
+    <script>
+      const body = document.querySelector("body");
+      const h1 = document.querySelector("h1");
+      const colors = [
+        "aliceblue",
+        "antiquewhite",
+        "aqua",
+        "aquamarine",
+        "azure",
+        "beige",
+        "bisque",
+        "black",
+        "blanchedalmond",
+        "blue",
+        "blueviolet",
+        "brown",
+        "burlywood",
+        "cadetblue",
+        "chartreuse",
+        "chocolate",
+        "coral",
+        "cornflowerblue",
+        "cornsilk",
+        "crimson",
+        "cyan",
+        "darkblue",
+        "darkcyan",
+        "darkgoldenrod",
+        "darkgray",
+        "darkgrey",
+        "darkgreen",
+        "darkkhaki",
+        "darkmagenta",
+        "darkolivegreen",
+        "darkorange",
+        "darkorchid",
+        "darkred",
+        "darksalmon",
+        "darkseagreen",
+        "darkslateblue",
+        "darkslategray",
+        "darkslategrey",
+        "darkturquoise",
+        "darkviolet",
+        "deeppink",
+        "deepskyblue",
+        "dimgray",
+        "dimgrey",
+        "dodgerblue",
+        "firebrick",
+        "floralwhite",
+        "forestgreen",
+        "fuchsia",
+        "gainsboro",
+        "ghostwhite",
+        "gold",
+        "goldenrod",
+        "gray",
+        "grey",
+        "green",
+        "greenyellow",
+        "honeydew",
+        "hotpink",
+        "indianred",
+        "indigo",
+        "ivory",
+        "khaki",
+        "lavender",
+        "lavenderblush",
+        "lawngreen",
+        "lemonchiffon",
+        "lightblue",
+        "lightcoral",
+        "lightcyan",
+        "lightgoldenrodyellow",
+        "lightgray",
+        "lightgrey",
+        "lightgreen",
+        "lightpink",
+        "lightsalmon",
+        "lightseagreen",
+        "lightskyblue",
+        "lightslategray",
+        "lightslategrey",
+        "lightsteelblue",
+        "lightyellow",
+        "lime",
+        "limegreen",
+        "linen",
+        "magenta",
+        "maroon",
+        "mediumaquamarine",
+        "mediumblue",
+        "mediumorchid",
+        "mediumpurple",
+        "mediumseagreen",
+        "mediumslateblue",
+        "mediumspringgreen",
+        "mediumturquoise",
+        "mediumvioletred",
+        "midnightblue",
+        "mintcream",
+        "mistyrose",
+        "moccasin",
+        "navajowhite",
+        "navy",
+        "oldlace",
+        "olive",
+        "olivedrab",
+        "orange",
+        "orangered",
+        "orchid",
+        "palegoldenrod",
+        "palegreen",
+        "paleturquoise",
+        "palevioletred",
+        "papayawhip",
+        "peachpuff",
+        "peru",
+        "pink",
+        "plum",
+        "powderblue",
+        "purple",
+        "red",
+        "rosybrown",
+        "royalblue",
+        "saddlebrown",
+        "salmon",
+        "sandybrown",
+        "seagreen",
+        "seashell",
+        "sienna",
+        "silver",
+        "skyblue",
+        "slateblue",
+        "slategray",
+        "slategrey",
+        "snow",
+        "springgreen",
+        "steelblue",
+        "tan",
+        "teal",
+        "thistle",
+        "tomato",
+        "turquoise",
+        "violet",
+        "wheat",
+        "white",
+        "whitesmoke",
+        "yellow",
+        "yellowgreen",
+      ];
+
+      function renderize() {
+        body.style.backgroundColor = colors[0];
+        h1.style.backgroundColor = colors[0];
+        colors.forEach((color) => {
+          let colorDiv = document.createElement("div");
+          colorDiv.style.backgroundColor = color;
+          colorDiv.innerText = color;
+          colorDiv.addEventListener("click", () => {
+            if (document.getElementsByClassName("selected")[0]) {
+              document
+                .getElementsByClassName("selected")[0]
+                .classList.remove("selected");
+            }
+            h1.innerText = color;
+            h1.style.backgroundColor = colorDiv.style.backgroundColor;
+            body.style.backgroundColor = colorDiv.style.backgroundColor;
+            colorDiv.classList.add("selected");
+          });
+          body.appendChild(colorDiv);
+        });
+      }
+      renderize();
+    </script>
+  </body>
+</html>
