@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP</title>
+</head>
+<body>
+  <h1>Escolha:</h1>
+  <div id="center">
+    <div class="items">
+      <span>Valor</span><input id="1" type="range" min="0" max="100">
+    </div>
+    <div class="items">
+      <span>Condomínio</span><input id="2" type="range" min="0" max="100">
+    </div>
+    <div class="items">
+      <span>Distância</span><input id="3" type="range" min="0" max="100">
+    </div>
+    <div class="items">
+      <span>Qualidade</span><input id="4" type="range" min="0" max="100">
+    </div>
+  </div>
+  <style>
+    *{box-sizing: border-box;}
+    body,html{
+      width: 100%;
+      height: 100%;
+    }
+    body{
+      display:flex;
+      flex-flow: column;
+      align-content: center;
+    }
+    h1{
+      font-size: 40px;
+      text-align: center;
+      }
+    .items{
+      display: flex;
+      align-content: center;
+      margin:15px auto;
+    }
+    span{
+      font-size: 32px;
+      line-height: 1.15;
+      width: 200px;
+      height:auto;
+    }
+    #center{
+      width:600px;
+      height:300px;
+      display:flex;
+      flex-flow: column;
+      align-items: center;
+      border-radius: 8px;
+      border: 1px solid salmon;
+      align-self: center;
+    }
+    input{
+      display: inline;
+      margin: 10px auto;
+    }
+  </style>
+  <script>
+
+/*
+      inp1 = 100
+      inp2 =  50
+      inp3 =   0
+      inp2 = 100
+
+
+      inp1 =   0
+      inp2 =  50
+      inp3 =  50
+      inp4 =  50
+
+
+*/
+
+    const inp1 = document.getElementById('1');
+    const inp2 = document.getElementById('2');
+    const inp3 = document.getElementById('3');
+    const inp4 = document.getElementById('4');
+    function calcular(n){
+      switch (n) {
+        case 1:
+          inp4.value = inp1.value
+          inp3.value = 100 - inp1.value
+          break;
+        case 2:
+          inp3.value = 100 - inp2.value;
+          break;
+        case 3:
+          inp2.value = 100 - inp3.value;
+          inp1.value = 100 - inp3.value
+          inp4.value = 100 - inp3.value
+          break;
+        case 4:
+          inp1.value = inp4.value;
+          break;
+      
+        default:
+          break;
+      }
+    }
+    inp1.addEventListener('input',function(f1){
+      calcular(1);
+    },false);
+    inp2.addEventListener('input',function(f2){
+      calcular(2);
+    },false);
+    inp3.addEventListener('input',function(f3){
+      calcular(3);
+    },false);
+    inp4.addEventListener('input',function(f4){
+      calcular(4);
+    },false);
+  </script>
+</body>
+</html>

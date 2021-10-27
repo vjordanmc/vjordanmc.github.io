@@ -38,11 +38,11 @@ function animateBlocks() {
     duration: 5000,
     delay: 0,
     complete: function () {
-      if (key == 1) {
-        return animateBlocks();
-      } else {
+      //if (key == 1) {
+      //  return animateBlocks();
+      //} else {
         return "";
-      }
+      //}
     },
   });
 }
