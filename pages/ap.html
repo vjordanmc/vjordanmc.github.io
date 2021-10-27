@@ -87,19 +87,21 @@
     function calcular(n){
       switch (n) {
         case 1:
-          inp4.value = inp1.value
-          inp3.value = 100 - inp1.value
+          inp4.value = inp1.value;
+          inp3.value = 100 - inp1.value;
           break;
         case 2:
           inp3.value = 100 - inp2.value;
+          inp4.value = inp2.value;
           break;
         case 3:
           inp2.value = 100 - inp3.value;
-          inp1.value = 100 - inp3.value
-          inp4.value = 100 - inp3.value
+          inp1.value = 100 - inp3.value;
+          inp4.value = 100 - inp3.value;
           break;
         case 4:
           inp1.value = inp4.value;
+          inp2.value = inp4.value;
           break;
       
         default:
